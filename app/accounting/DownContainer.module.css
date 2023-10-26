@@ -1,0 +1,10 @@
+.downContainer {
+  width: 50%;
+  height: 60%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
