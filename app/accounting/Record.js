@@ -1,13 +1,13 @@
 import DeleteButton from "./DeleteButton";
 
-import styles from "./Record.module.css"
+import styles from "./Record.module.css";
 
-function Record({inAndOut,item}) {
+function Record({ inAndOut, item, onDeleteClick }) {
   return (
     <div className={styles.RecordContainer}>
       <p>{inAndOut}</p>
       <p>{item}</p>
-      <DeleteButton />
+      <DeleteButton onClick={onDeleteClick} />
     </div>
   );
 }

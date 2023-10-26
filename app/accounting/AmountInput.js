@@ -1,14 +1,15 @@
 "use client"
+
 import { useState } from 'react';
 
-function AmountInput({ onAmountChange }) {
-  const [amount, setAmount] = useState("");
+function AmountInput({ value, onAmountChange }) {
+  const [amount, setAmount] = useState(value);
+
   const handleAmountChange = (event) => {
     const enteredAmount = event.target.value;
     setAmount(enteredAmount);
     onAmountChange(enteredAmount);
   };
-
 
   return (
     <div>
@@ -17,7 +18,7 @@ function AmountInput({ onAmountChange }) {
         type="number"
         id="amount"
         placeholder="$$$"
-        value={amount}
+        value={value}
         onChange={handleAmountChange}
       />
     </div>

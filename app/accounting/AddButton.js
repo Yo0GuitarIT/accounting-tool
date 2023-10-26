@@ -1,9 +1,5 @@
-function AddButton() {
-  return (
-    <button>
-      add
-    </button>
-  );
+function AddButton({ onAddClick }) {
+  return <button onClick={onAddClick}>add</button>;
 }
 
 export default AddButton;
