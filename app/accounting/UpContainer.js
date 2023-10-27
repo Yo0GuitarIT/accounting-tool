@@ -7,7 +7,7 @@ import ItemInput from "./ItemInput";
 import AddButton from "./AddButton";
 import styles from "./UpContainer.module.css";
 
-function upContainer({ onAddRecord }) {
+function UpContainer({ onAddRecord }) {
   const [formData, setFormData] = useState({
     incomeExpense: "+",
     amount: "",
@@ -56,4 +56,4 @@ function upContainer({ onAddRecord }) {
     </div>
   );
 }
-export default upContainer;
+export default UpContainer;
