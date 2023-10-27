@@ -1,18 +1,18 @@
 "use client"
 import { v4 as uuid } from "uuid";
-import { useState } from 'react';
+import { useState } from "react";
 import Link from "next/link";
 import UpContainer from "./UpContainer";
 import DownContainer from "./DownContainer";
 import styles from "./page.module.css";
 
 const defaultData = [{
-  id: uuid(),
+  id: "1234",
   incomeExpense: "+",
   amount: 5000,
   item: "Scholarship",
 }, {
-  id: uuid(),
+  id: "7890",
   incomeExpense: "-",
   amount: 200,
   item: "Dinner",
