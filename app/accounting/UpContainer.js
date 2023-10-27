@@ -1,13 +1,10 @@
 "use client";
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
-
-
 import IncomeExpenseInput from "./IncomeExpense";
 import AmountInput from "./AmountInput";
 import ItemInput from "./ItemInput";
 import AddButton from "./AddButton";
-
 import styles from "./UpContainer.module.css";
 
 function upContainer({ onAddRecord }) {
@@ -18,10 +15,7 @@ function upContainer({ onAddRecord }) {
   });
 
   const handleFieldChange = (field, value) => {
-    setFormData({
-      ...formData,
-      [field]: value,
-    });
+    setFormData({ ...formData, [field]: value, });
   };
 
   const handleAddRecord = () => {
@@ -48,19 +42,16 @@ function upContainer({ onAddRecord }) {
           handleFieldChange("incomeExpense", selectedOption)
         }
       />
-
       <AmountInput
         value={formData.amount}
         onAmountChange={(inputAmount) =>
           handleFieldChange("amount", inputAmount)
         }
       />
-
       <ItemInput
         value={formData.item}
         onItemChange={(inputItem) => handleFieldChange("item", inputItem)}
       />
-
       <AddButton onAddClick={handleAddRecord} />
     </div>
   );

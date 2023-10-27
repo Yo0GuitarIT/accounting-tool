@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from 'react';
 
 function AmountInput({ value, onAmountChange }) {
@@ -15,12 +14,14 @@ function AmountInput({ value, onAmountChange }) {
     <div>
       <label htmlFor="amount"></label>
       <input
+        style={{ margin: "10px", padding: "5px", textAlign: "center", color: "#00d775" }}
         type="number"
         id="amount"
         placeholder="$$$"
         value={value}
         onChange={handleAmountChange}
       />
+
     </div>
   );
 }

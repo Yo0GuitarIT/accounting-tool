@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from 'react';
 
 function ItemInput({ value, onItemChange }) {
@@ -15,6 +14,7 @@ function ItemInput({ value, onItemChange }) {
     <div>
       <label htmlFor="item"></label>
       <input
+        style={{ margin: "10px", padding: "5px", textAlign: "center", color: "#00d775" }}
         type="text"
         id="item"
         placeholder="Item"

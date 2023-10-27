@@ -7,7 +7,7 @@ function Total({ totalAmount }) {
     setTotal(totalAmount);
   }, [totalAmount]);
 
-  return <p>Total: {total}</p>;
+  return <p style={{ height: "30px" ,display:"flex",alignItems:"center" }}>Total: {total}</p>;
 }
 
 export default Total;

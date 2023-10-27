@@ -5,8 +5,8 @@ import styles from "./page.module.css"
 export default function Page() {
   return (
     <div className={styles.main}>
-      <h1>Hello, Home page!</h1>
-      <Link href="/accounting/">Les's Start~</Link>
-    </div>
-    );
+      <h1 style={{ marginBottom: "revert" }}>Accounting Tool</h1>
+      <Link className={styles.button85} href="/accounting/">Les's Start~</Link>
+    </div >
+  );
 }
