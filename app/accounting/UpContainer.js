@@ -15,10 +15,22 @@ function UpContainer({ onAddRecord }) {
   });
 
   const handleFieldChange = (field, value) => {
-    setFormData({ ...formData, [field]: value, });
+    setFormData({ ...formData, [field]: value });
   };
 
-  const handleAddRecord = () => {
+  const handleAddRecord = (e) => {
+    e.preventDefault();
+
+    if (formData.amount.trim() === "") {
+      alert("Please enter Number");
+      return;
+    }
+
+    if (formData.item.trim() === "") {
+      alert("Please enter Item");
+      return;
+    }
+
     const recordData = {
       id: uuid(),
       incomeExpense: formData.incomeExpense,
@@ -36,7 +48,7 @@ function UpContainer({ onAddRecord }) {
   };
 
   return (
-    <div className={styles.upContainer}>
+    <form className={styles.upContainer} onSubmit={handleAddRecord}>
       <IncomeExpenseInput
         onOptionChange={(selectedOption) =>
           handleFieldChange("incomeExpense", selectedOption)
@@ -53,7 +65,7 @@ function UpContainer({ onAddRecord }) {
         onItemChange={(inputItem) => handleFieldChange("item", inputItem)}
       />
       <AddButton onAddClick={handleAddRecord} />
-    </div>
+    </form>
   );
 }
 export default UpContainer;

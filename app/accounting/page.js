@@ -7,12 +7,12 @@ import DownContainer from "./DownContainer";
 import styles from "./page.module.css";
 
 const defaultData = [{
-  id: "1234",
+  id: uuid(),
   incomeExpense: "+",
   amount: 5000,
   item: "Scholarship",
 }, {
-  id: "7890",
+  id: uuid(),
   incomeExpense: "-",
   amount: 200,
   item: "Dinner",

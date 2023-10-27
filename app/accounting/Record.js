@@ -3,7 +3,10 @@ import styles from "./Record.module.css";
 
 function Record({ inAndOut, item, onDeleteClick }) {
   return (
-    <div className={styles.RecordContainer} style={{ color: inAndOut < 0 ? "red" : "inherit" }} >
+    <div
+      className={styles.RecordContainer}
+      style={{ color: inAndOut < 0 ? "red" : "inherit" }}
+    >
       <div className={styles.boxContainer}>
         <p>{inAndOut}</p>
       </div>

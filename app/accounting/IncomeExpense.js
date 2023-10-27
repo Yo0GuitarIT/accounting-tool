@@ -1,5 +1,5 @@
-"use client"
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 
 function IncomeExpenseInput({ onOptionChange }) {
   const [selectedOption, setSelectedOption] = useState("");
@@ -14,10 +14,16 @@ function IncomeExpenseInput({ onOptionChange }) {
     <>
       <label htmlFor="transactionType"></label>
       <select
-        style={{ margin: "10px", padding: "5px", color: "#00d775"  }}
+        style={{
+          margin: "10px",
+          padding: "5px",
+          color: "#00d775",
+          fontSize: "20px",
+        }}
         id="transactionType"
         onChange={handleOptionChange}
-        value={selectedOption}>
+        value={selectedOption}
+      >
         <option value="+">+</option>
         <option value="-">-</option>
       </select>
