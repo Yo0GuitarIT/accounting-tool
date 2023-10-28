@@ -1,4 +1,5 @@
 .main {
+  background-color: aliceblue;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,6 +7,10 @@
   padding: 6rem;
   min-height: 100vh;
   font-family: 'Edu TAS Beginner', cursive;
+}
+
+.main h1{
+  color: black;
 }
 
 .description {

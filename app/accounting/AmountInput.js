@@ -23,8 +23,10 @@ function AmountInput({ value, onAmountChange }) {
           margin: "10px",
           padding: "5px",
           textAlign: "center",
-          color: "#00d775",
+          color: "black",
           fontSize: "20px",
+          backgroundColor: "white",
+          borderRadius:"10px"
         }}
         type="number"
         id="amount"

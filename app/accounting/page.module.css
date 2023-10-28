@@ -1,5 +1,5 @@
 .mainContainer {
-  background-color:black ;
+  background-color:aliceblue;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -9,10 +9,19 @@
   gap: 15px;
 }
 
+.mainInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 70%;
+  height:80%;
+}
 
 .button41 {
   background-color: initial;
-  background-image: linear-gradient(-180deg, #00D775, #00BD68);
+  background-image: linear-gradient(-180deg, #000000, #474747);
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
   color: #FFFFFF;
@@ -38,7 +47,7 @@
 }
 
 .button41:hover {
-  background: #00bd68;
+   opacity: 0.5;
 }
 
 .fontFamily{

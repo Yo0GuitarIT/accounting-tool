@@ -14,6 +14,8 @@ function Total({ totalAmount }) {
         display: "flex",
         alignItems: "center",
         marginTop: "15px",
+        color: "black",
+        fontSize:"30px"
       }}
     >
       Total: {total}

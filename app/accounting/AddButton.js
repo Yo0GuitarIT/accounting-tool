@@ -2,12 +2,14 @@ function AddButton() {
   return (
     <input
       type="submit"
-      value="submit"
+      value="新增紀錄"
       style={{
         margin: "10px",
         padding: "5px",
-        color: "#00d775",
+        color: "black",
         fontSize: "20px",
+        backgroundColor: "white",
+        borderRadius:"10px"
       }}
     />
   );

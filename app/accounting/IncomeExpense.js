@@ -17,15 +17,17 @@ function IncomeExpenseInput({ onOptionChange }) {
         style={{
           margin: "10px",
           padding: "5px",
-          color: "#00d775",
+          color: "black",
           fontSize: "20px",
+          backgroundColor: "white",
+          borderRadius:"10px"
         }}
         id="transactionType"
         onChange={handleOptionChange}
         value={selectedOption}
       >
-        <option value="+">+</option>
-        <option value="-">-</option>
+        <option value="+">收入</option>
+        <option value="-">支出</option>
       </select>
     </>
   );
