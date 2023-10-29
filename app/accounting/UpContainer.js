@@ -6,6 +6,22 @@ import AmountInput from "./AmountInput";
 import ItemInput from "./ItemInput";
 import AddButton from "./AddButton";
 import styles from "./UpContainer.module.css";
+import { db } from "./firebase";
+import { collection, addDoc } from "firebase/firestore";
+
+async function writeDataToFirebase(recordData) {
+  try {
+    const docRef = await addDoc(collection(db, "accounting"), {
+      id: recordData.id,
+      incomeExpense: recordData.incomeExpense,
+      amount: recordData.amount,
+      item: recordData.item
+    });
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+}
 
 function UpContainer({ onAddRecord }) {
   const [formData, setFormData] = useState({
@@ -22,7 +38,7 @@ function UpContainer({ onAddRecord }) {
     e.preventDefault();
 
     if (formData.amount.trim() === "") {
-      alert("Please enter Number");
+      alert("Please Enter Number");
       return;
     }
 
@@ -39,6 +55,7 @@ function UpContainer({ onAddRecord }) {
     };
 
     onAddRecord(recordData);
+    writeDataToFirebase(recordData);
 
     setFormData({
       incomeExpense: formData.incomeExpense,
