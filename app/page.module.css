@@ -6,10 +6,10 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
-  font-family: 'Edu TAS Beginner', cursive;
+  font-family: "Edu TAS Beginner", cursive;
 }
 
-.main h1{
+.main h1 {
   color: black;
 }
 
@@ -103,7 +103,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -234,7 +234,6 @@
   }
 }
 
-
 .button85 {
   padding: 0.6em 2em;
   border: none;
@@ -252,16 +251,18 @@
 
 .button85:before {
   content: "";
-  background: linear-gradient(45deg,
-      #ff0000,
-      #ff7300,
-      #fffb00,
-      #48ff00,
-      #00ffd5,
-      #002bff,
-      #7a00ff,
-      #ff00c8,
-      #ff0000);
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
   position: absolute;
   top: -2px;
   left: -2px;
@@ -301,3 +302,33 @@
   top: 0;
   border-radius: 10px;
 }
+
+.memberSystem {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family:  monospace;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.memberSystem input{
+  background-color: aliceblue;
+  text-align: center;
+  height: 20px;
+  border-radius: 5px;
+  box-shadow: none;
+  color: black;
+}
+
+.errorMessage {
+  color:red;
+  font-size: 10px;
+}
+
+

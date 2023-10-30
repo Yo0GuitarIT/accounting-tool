@@ -8,10 +8,11 @@ const firebaseConfig = {
   storageBucket: "my-accounting-tool.appspot.com",
   messagingSenderId: "898210110351",
   appId: "1:898210110351:web:fddf273dbac9a414dc09fa",
-  measurementId: "G-RNMC01K4SE"
+  measurementId: "G-RNMC01K4SE",
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 export { db };
+export { app };
