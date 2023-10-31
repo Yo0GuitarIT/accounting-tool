@@ -9,9 +9,10 @@ import styles from "./UpContainer.module.css";
 import { db } from "./firebase";
 import { collection, addDoc } from "firebase/firestore";
 
-async function writeDataToFirebase(recordData) {
+async function writeDataToFirebase(recordData,userId) {
   try {
-    const docRef = await addDoc(collection(db, "accounting"), {
+    console.log(userId);
+    const docRef = await addDoc(collection(db, userId), {
       id: recordData.id,
       incomeExpense: recordData.incomeExpense,
       amount: recordData.amount,
@@ -23,7 +24,8 @@ async function writeDataToFirebase(recordData) {
   }
 }
 
-function UpContainer({ onAddRecord }) {
+function UpContainer({ onAddRecord, userId }) {
+  
   const [formData, setFormData] = useState({
     incomeExpense: "+",
     amount: "",
@@ -55,7 +57,7 @@ function UpContainer({ onAddRecord }) {
     };
 
     onAddRecord(recordData);
-    writeDataToFirebase(recordData);
+    writeDataToFirebase(recordData, userId);
 
     setFormData({
       incomeExpense: formData.incomeExpense,
