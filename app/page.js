@@ -71,6 +71,7 @@ export default function Page() {
       })
       .catch((error) => {
         console.log(error.message);
+        alert("註冊失敗，請確認密碼只少六個字元")
       });
   };
 
